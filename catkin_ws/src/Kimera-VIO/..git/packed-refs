@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+8ae46210d27aa8598d99b934b73ee6287dc73919 refs/remotes/origin/feature/dynamic_log_output_path
+ba6db5255e8fae41a683fce56792b29d364d7e4b refs/remotes/origin/feature/hydra
+204c5c5d152cf63c53aaeedb5f5b1dea5e8d7c17 refs/remotes/origin/feature/kimera_pgmo
+fff1f74721f9407d387a02d09b37c17cd104fe4d refs/remotes/origin/feature/prerelease
+db27f20094f2b300b54eb891bfd9f851892802c4 refs/remotes/origin/fix/distortion
+94a8262140122eb7956f10fb6b0dae5e43c1839b refs/remotes/origin/fix/distortion_test
+5520bae05ed83cc3738a9d677556a34f4a6526da refs/remotes/origin/fix/example_dockerfile
+33b4fcbe4bfc19a2bda18fc9f3dc45afeed00361 refs/remotes/origin/fix/mesh_2d
+641576fd86bdecbd663b4db3cb068f49502f3a2c refs/remotes/origin/master
+41a74b7bff24d3d962d6a8271ec9e07b41d877c4 refs/tags/v4.0
+bceed7203f824c1bcffc0c195a186d13c5ea2b22 refs/tags/v5.0

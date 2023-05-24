@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+514ebd1615659caf3bba4e532bcce9424b45e421 refs/remotes/origin/feature/dynamic_log_output_path
+131be586c9685237e397c4dd7431183c86e2b456 refs/remotes/origin/feature/jackrabbot_launch_files
+bb651bc336803441e31feeee2a2fd6ce30be1188 refs/remotes/origin/feature/kimera_pgmo
+8a09fef73cf1b0bb817df9c808f5fbee0a8cb9a4 refs/remotes/origin/feature/prerelease
+233541e3e086a766d5abe948b7a8bc0c97821cac refs/remotes/origin/feature/realsense_capture
+27a8676e83cea0c0669723b120874526024bc676 refs/remotes/origin/feature/ros_unit_tests
+2b55132458739bc49328012ca5a0fc86616e04c2 refs/remotes/origin/feature/ros_wall_time
+8a095f571cf1f39c4e382a30cb7e07022e5d8c9f refs/remotes/origin/fix/check_le_gt
+87c57e4fe5acd35a1358e729428325565bea9485 refs/remotes/origin/fix/distortion
+9b8aeaedd407602b058ebcaa7aa1ed411a3abe9c refs/remotes/origin/master
+d7a4375a60d91a67e2514dd64dbdea6b119d0c6f refs/tags/v4.0

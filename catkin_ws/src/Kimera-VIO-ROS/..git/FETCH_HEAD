@@ -1,0 +1,11 @@
+9b8aeaedd407602b058ebcaa7aa1ed411a3abe9c		branch 'master' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+514ebd1615659caf3bba4e532bcce9424b45e421	not-for-merge	branch 'feature/dynamic_log_output_path' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+131be586c9685237e397c4dd7431183c86e2b456	not-for-merge	branch 'feature/jackrabbot_launch_files' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+bb651bc336803441e31feeee2a2fd6ce30be1188	not-for-merge	branch 'feature/kimera_pgmo' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+8a09fef73cf1b0bb817df9c808f5fbee0a8cb9a4	not-for-merge	branch 'feature/prerelease' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+233541e3e086a766d5abe948b7a8bc0c97821cac	not-for-merge	branch 'feature/realsense_capture' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+27a8676e83cea0c0669723b120874526024bc676	not-for-merge	branch 'feature/ros_unit_tests' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+2b55132458739bc49328012ca5a0fc86616e04c2	not-for-merge	branch 'feature/ros_wall_time' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+8a095f571cf1f39c4e382a30cb7e07022e5d8c9f	not-for-merge	branch 'fix/check_le_gt' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+87c57e4fe5acd35a1358e729428325565bea9485	not-for-merge	branch 'fix/distortion' of https://github.com/MIT-SPARK/Kimera-VIO-ROS
+d7a4375a60d91a67e2514dd64dbdea6b119d0c6f	not-for-merge	tag 'v4.0' of https://github.com/MIT-SPARK/Kimera-VIO-ROS

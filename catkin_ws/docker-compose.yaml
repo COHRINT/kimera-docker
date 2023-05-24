@@ -1,0 +1,8 @@
+services:
+  kimera:
+    image: kimera-docker:0.2
+    network_mode: "host"
+    volumes:
+      - /home/lukez/kimer_docker/catkin_ws/src:/root/catkin_ws/src
+    stdin_open: true
+    tty: true

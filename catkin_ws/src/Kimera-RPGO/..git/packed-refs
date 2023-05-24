@@ -1,0 +1,8 @@
+# pack-refs with: peeled fully-peeled sorted 
+25ac8093641f35a8dda0b5cf956087f21bb24e94 refs/remotes/origin/feature/clipper_pcm_gnc_multirobot
+e576eb600343f66d165deaadddc0e31ee7843bdb refs/remotes/origin/feature/clipper_pmc_gnc
+16a80107784c393f23673fe7cc3da3379e4ce3c5 refs/remotes/origin/feature/hydra_multi
+d4d4c968703fe4eaf5229b20f90064d891e3ef5b refs/remotes/origin/feature/max_clique_pmc
+3718a6f29dc1de5c2966fcbd679eee27a7933a68 refs/remotes/origin/fix/gtsam_boost_removal
+8c5e163ba38345ff583d87403ad53bf966c0221b refs/remotes/origin/master
+b38abdc3bc5164c9250e7535e54c85bcd5c4600a refs/tags/dec-2020

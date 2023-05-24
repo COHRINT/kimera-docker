@@ -1,0 +1,20 @@
+# pack-refs with: peeled fully-peeled sorted 
+e261fd88bfc419b54fcfca11216bedd7da11bd39 refs/remotes/origin/devel/alice
+ac33221d4a6e203fec87de8d428ffdcab16e48d7 refs/remotes/origin/devel/line-extraction
+49aed82d08b667182af8949c0dc4bff52f7eb938 refs/remotes/origin/devel/opencv3.4.13
+8f8fa3ae4a24a68e970d1f959ea2d87089eaaf81 refs/remotes/origin/devel/opencv3.4.15
+151eac66808a188147c12e2e327cd800df939d6a refs/remotes/origin/devel/up-drive
+1e0f6455a49e97be98d25457b96a1195bbc1257f refs/remotes/origin/feature/3.4.1
+325bdec475da8bb03a82f290f1d18ff2576a37d5 refs/remotes/origin/feature/3.4.10_with_dnn
+22502db72fad5c7300677e8deb46ff9b987ff9ba refs/remotes/origin/feature/3.4.2
+9d9e1faac73b0350bf07f6cd8bad9fc4cc190f92 refs/remotes/origin/feature/compile_with_cuda
+fdb17fb0e4a05938e7a14d2ddf9f6a2ad223df21 refs/remotes/origin/feature/compile_with_surface_matching_module
+642b855a231936f18e1f3f6be1d6c852c116c67a refs/remotes/origin/feature/enable-cuda
+57ee69712854f4109c5704070f773efaedeaffe7 refs/remotes/origin/feature/install
+c2e7ae5efddaa11a07ae2c13b15f8f2a8c6e9595 refs/remotes/origin/feature/ipp
+3549293d1ba5f196b0cb0f388296cfcbba53c81f refs/remotes/origin/feature/openmp_mac_fix
+1e7a85044fdc03e1deb90303623aaa2aa5ed7836 refs/remotes/origin/feature/update-to-3.4
+4733e89829d4e3b784c1d556b5aa550b7e63e387 refs/remotes/origin/fix/ccache-patch
+934f93b0595ef9b340017b46acd720f51ac12056 refs/remotes/origin/master
+ee77eae01acc37597f2c0485909341c2bc680eaf refs/remotes/origin/nscheidt/disable-protobuf
+abe08b75cacc31ba8d0b4c5be3a7b2de114b536c refs/remotes/origin/revert-20-feature/install-3.4.2

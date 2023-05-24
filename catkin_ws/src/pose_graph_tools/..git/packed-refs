@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+644c0741c0c596e608a2d954c6920c8d6455f318 refs/remotes/origin/feature/hydra
+2fc34bbfaaaac74b0e9c8ef4cd1b5388ed5eea85 refs/remotes/origin/feature/kimera_pgmo
+1d81fe13d7ceb612b587a256aa769923736525ae refs/remotes/origin/feature/multirobot
+6012c1320cdf27aeaeee373d23f47bb3f53dd33e refs/remotes/origin/master
