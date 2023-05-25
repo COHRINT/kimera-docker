@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 3.5)
 project(kimera_rpgo VERSION 1.0 LANGUAGES CXX)
 
+find_package(catkin_simple REQUIRED)
+
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
@@ -28,9 +30,11 @@ if(NOT TARGET Boost::boost)
   INTERFACE_INCLUDE_DIRECTORIES "${Boost_INCLUDE_DIRS}")
 endif()
 
+catkin_simple()
+
 ###########################################################################
 # Compile
-add_library(KimeraRPGO SHARED
+cs_add_library(KimeraRPGO SHARED
   src/GenericSolver.cpp
   src/RobustSolver.cpp
   src/Logger.cpp
@@ -51,12 +55,7 @@ target_include_directories(KimeraRPGO PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(KimeraRPGO
-  PUBLIC
-    Boost::boost
-    gtsam
-    gtsam_unstable
-)
+target_link_libraries(KimeraRPGO Boost::boost gtsam gtsam_unstable)
 
 target_compile_options(KimeraRPGO
   PRIVATE -Wall -pipe
@@ -64,11 +63,11 @@ target_compile_options(KimeraRPGO
 
 ###########################################################################
 # Define executables
-add_executable(RpgoReadG2o examples/RpgoReadG2o.cpp)
+cs_add_executable(RpgoReadG2o examples/RpgoReadG2o.cpp)
 target_link_libraries(RpgoReadG2o KimeraRPGO)
-add_executable(RpgoReadG2oIncremental examples/RpgoReadG2oIncremental.cpp)
+cs_add_executable(RpgoReadG2oIncremental examples/RpgoReadG2oIncremental.cpp)
 target_link_libraries(RpgoReadG2oIncremental KimeraRPGO)
-add_executable(GenerateTrajectories examples/GenerateTrajectories.cpp)
+cs_add_executable(GenerateTrajectories examples/GenerateTrajectories.cpp)
 target_link_libraries(GenerateTrajectories gtsam)
 
 ###########################################################################
@@ -120,8 +119,8 @@ install(FILES
   DESTINATION ${INSTALL_CONFIGDIR}
 )
 
-export(TARGETS KimeraRPGO FILE KimeraRPGOTargets.cmake)
-export(PACKAGE KimeraRPGO)
+cs_export(TARGETS KimeraRPGO FILE KimeraRPGOTargets.cmake)
+cs_export(PACKAGE KimeraRPGO)
 
 ################################################################################
 # Print configuration variables

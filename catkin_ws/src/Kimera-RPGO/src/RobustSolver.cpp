@@ -13,6 +13,8 @@ author: Yun Chang, Luca Carlone
 #include<unistd.h>
 
 #include "ros/ros.h"
+#include "lio_sam/ChannelFilter.h"
+#include "lio_sam/SLAMRequest.h"
 
 #include <gtsam/inference/inferenceExceptions.h>
 #include <gtsam/nonlinear/DoglegOptimizer.h>
@@ -313,6 +315,7 @@ void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
   auto start = std::chrono::high_resolution_clock::now();
 
   static int timeStep = 0;
+  std::vector<short int> key_idx{-1};
   std::cout << "k = " << timeStep << endl;
   if (timeStep != 0) {
       std::cout << "Waiting for communication from tracking algo..." << endl;
@@ -326,6 +329,7 @@ void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
   if (key_idx.at(0) == -1) {
       std::cout << "Factor NOT requested by tracking algo..." << endl;
   }
+  timeStep++;
 
   bool do_optimize;
   if (outlier_removal_) {
