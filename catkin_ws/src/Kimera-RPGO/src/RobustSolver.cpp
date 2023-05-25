@@ -22,6 +22,8 @@ author: Yun Chang, Luca Carlone
 #include <gtsam/nonlinear/GncOptimizer.h>
 #include <gtsam/nonlinear/LevenbergMarquardtOptimizer.h>
 #include <gtsam/slam/dataset.h>
+#include <gtsam/geometry/Pose3.h>
+#include <gtsam/nonlinear/Marginals.h>
 
 #include "KimeraRPGO/Logger.h"
 #include "KimeraRPGO/outlier/Pcm.h"
@@ -101,6 +103,9 @@ RobustSolver::RobustSolver(const RobustSolverParams& params)
     outfile << "graph-size,spin-time(mu-s),num-lc,num-inliers\n";
     outfile.close();
   }
+
+  ros::NodeHandle nh;
+  pubCF = nh.advertise<lio_sam::ChannelFilter>("SLAM_CF_chatter", 1);
 }
 
 void RobustSolver::getGncKnownInliers(InlierVectorType* known_inliers) {
@@ -311,9 +316,7 @@ void RobustSolver::forceUpdate(const gtsam::NonlinearFactorGraph& nfg,
 void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
                           const gtsam::Values& values,
                           bool optimize_graph) {
-  // Start timer
-  auto start = std::chrono::high_resolution_clock::now();
-
+  
   static int timeStep = 0;
   std::vector<short int> key_idx{-1};
   std::cout << "k = " << timeStep << endl;
@@ -331,6 +334,9 @@ void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
   }
   timeStep++;
 
+  // Start timer
+  auto start = std::chrono::high_resolution_clock::now();
+
   bool do_optimize;
   if (outlier_removal_) {
     do_optimize =
@@ -345,6 +351,85 @@ void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
   auto stop = std::chrono::high_resolution_clock::now();
   auto spin_time =
       std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+  nfg_.print();
+
+  if (key_idx.at(0) != -1) { // Only send factors if data was requested by tracking algorithm
+    std::cout << "Factors requested by tracking algo..." << endl;
+    // Extract vector of keys and "reset" it to be empty
+    gtsam::KeyVector cur_keys = values_.keys();
+    int num_keys = cur_keys.size();
+    cur_keys.erase(cur_keys.begin(),cur_keys.end());
+
+
+
+    // Only save specified keys
+    for (int i = 0; i < num_keys; i++) {
+        for (int j = 0; j < key_idx.size(); j++) {
+            if (i == key_idx.at(j)) {
+                cur_keys.push_back(i);
+                break;
+            }
+        }
+    }
+    if (!cur_keys.empty()) {
+      // create instance of marginals class
+      // gtsam::Marginals curMarginal(isam->getFactorsUnsafe(), isamCurrentEstimate, gtsam::Marginals::Factorization::CHOLESKY);
+
+      gtsam::Marginals curMarginal(nfg_, values_);
+
+      cout << "****************************************************" << endl;
+      cout << "Tracking Algorithm Requested Factor for Time Steps: ";
+      for (int i =0; i < cur_keys.size(); i++) {
+          cout << cur_keys.at(i) << " ";
+      }
+      cout << endl;
+      // curMarginal.print();
+
+      // compute joint marginal covariance
+      gtsam::JointMarginal curJointMarginal = curMarginal.jointMarginalCovariance(cur_keys);
+
+      // // compute joint marginal information
+      gtsam::JointMarginal curJointInformation = curMarginal.jointMarginalInformation(cur_keys);
+
+      // generate joint information matrix
+      gtsam::Matrix curJointInformationMatrix = curJointInformation.fullMatrix();
+
+      // Initialize CF message
+      // lio_sam::factors factors; // Deprecated
+      lio_sam::ChannelFilter CF;
+
+      // Add information matrix to CF message
+      for (int i = 0; i < curJointInformationMatrix.rows(); i++) {
+          for (int j = 0; j < curJointInformationMatrix.cols(); j++) {
+              CF.infMat.push_back(curJointInformationMatrix(i,j));
+          }
+      }
+      
+      // Add dimension of information matrix to CF message
+      CF.matrixDim = curJointInformationMatrix.rows();
+
+
+      // Add means to CF message
+      for (int i = 0; i < cur_keys.size(); i++) {
+          gtsam::Pose3 curEstimate = values_.at<gtsam::Pose3>(cur_keys.at(i));
+          CF.infVec.push_back(curEstimate.rotation().roll());
+          CF.infVec.push_back(curEstimate.rotation().pitch());
+          CF.infVec.push_back(curEstimate.rotation().yaw());
+          CF.infVec.push_back(curEstimate.translation().x());
+          CF.infVec.push_back(curEstimate.translation().y());
+          CF.infVec.push_back(curEstimate.translation().z());
+      }
+
+      // Add the number of means to ROS message
+      // factors.numMeans = cur_keys.size();
+
+      // Publish CF message
+      std::cout << "Sending data to tracking algorithm..." << endl;
+      ros::Duration(1.0).sleep();
+      pubCF.publish(CF);
+    }
+  }
 
   // Log status
   if (log_ && optimize_graph) {

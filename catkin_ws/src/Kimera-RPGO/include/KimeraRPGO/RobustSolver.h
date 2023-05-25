@@ -9,6 +9,8 @@ author: Yun Chang, Luca Carlone
 #include <string>
 #include <vector>
 
+#include "ros/ros.h"
+
 #include <gtsam/nonlinear/NonlinearFactorGraph.h>
 #include <gtsam/nonlinear/Values.h>
 #include <gtsam/slam/BetweenFactor.h>
@@ -122,6 +124,8 @@ class RobustSolver : public GenericSolver {
   size_t latest_num_lc_;
 
   RobustSolverParams params_;
+
+  ros::Publisher pubCF;
 
  public:
   /*! \brief Save results from Solver
