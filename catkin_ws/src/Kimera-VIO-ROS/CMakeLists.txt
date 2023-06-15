@@ -4,6 +4,13 @@ project(kimera_vio_ros)
 find_package(catkin_simple REQUIRED)
 
 ### System Dependencies
+find_package(DBoW2 REQUIRED)
+if(NOT TARGET DBoW2::DBoW2)
+  add_library(DBoW2::DBoW2 INTERFACE IMPORTED)
+  set_target_properties(DBoW2::DBoW2 PROPERTIES
+  INTERFACE_LINK_LIBRARIES "${DBoW2_LIBRARIES}"
+  INTERFACE_INCLUDE_DIRECTORIES "${DBoW2_INCLUDE_DIRS}")
+endif()
 find_package(Boost REQUIRED COMPONENTS
   serialization system filesystem thread date_time regex timer chrono)
 if(NOT TARGET Boost::boost)

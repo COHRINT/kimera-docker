@@ -332,7 +332,7 @@ void RobustSolver::update(const gtsam::NonlinearFactorGraph& factors,
   if (key_idx.at(0) == -1) {
       std::cout << "Factor NOT requested by tracking algo..." << endl;
   }
-  timeStep++;
+  // timeStep++;
 
   // Start timer
   auto start = std::chrono::high_resolution_clock::now();

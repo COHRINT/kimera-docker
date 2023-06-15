@@ -42,6 +42,8 @@ if(NOT TARGET DBoW2::DBoW2)
   INTERFACE_INCLUDE_DIRECTORIES "${DBoW2_INCLUDE_DIRS}")
 endif()
 find_package(KimeraRPGO REQUIRED)
+find_package(catkin_simple REQUIRED)
+
 # Pangolin is optional
 find_package(Pangolin QUIET)
 
@@ -80,8 +82,10 @@ else()
   message(STATUS "Vocabulary file exists, will not download.")
 endif()
 
+catkin_simple()
+
 ### Compile the code
-add_library(${PROJECT_NAME} SHARED "")
+cs_add_library(${PROJECT_NAME} SHARED "")
 
 ### Add source code for data provider.
 add_subdirectory(include/kimera-vio/dataprovider)
@@ -129,19 +133,7 @@ add_subdirectory(src/visualizer)
 add_subdirectory(include/kimera-vio/third_party/triangle)
 add_subdirectory(src/third_party/triangle)
 
-target_link_libraries(${PROJECT_NAME}
-  PRIVATE
-    opengv
-    DBoW2::DBoW2
-    KimeraRPGO
-  PUBLIC
-    Boost::boost
-    ${OpenCV_LIBRARIES}
-    ${GFLAGS_LIBRARIES}
-    ${GLOG_LIBRARIES}
-    gtsam
-    gtsam_unstable
-)
+target_link_libraries(${PROJECT_NAME} opengv DBoW2::DBoW2 KimeraRPGO Boost::boost ${OpenCV_LIBRARIES} ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES} gtsam gtsam_unstable)
 target_include_directories(${PROJECT_NAME}
   PUBLIC
     ${OpenCV_INCLUDE_DIRS}
@@ -154,10 +146,7 @@ target_include_directories(${PROJECT_NAME}
 
 # Pangolin is optional
 if(Pangolin_FOUND)
-  target_link_libraries(${PROJECT_NAME}
-    PUBLIC
-      ${Pangolin_LIBRARIES}
-  )
+  target_link_libraries(${PROJECT_NAME} ${Pangolin_LIBRARIES})
   target_include_directories(${PROJECT_NAME}
     PUBLIC
       ${Pangolin_INCLUDE_DIRS}
@@ -178,109 +167,11 @@ target_compile_features(${PROJECT_NAME} PUBLIC
 
 # Add an alias so that library can be used inside the build tree,
 # e.g. when testing
-add_library(kimera_vio::kimera_vio ALIAS kimera_vio)
+#cs_add_library(kimera_vio::kimera_vio ALIAS kimera_vio)
 
-add_executable(stereoVIOEuroc ./examples/KimeraVIO.cpp)
-target_link_libraries(stereoVIOEuroc PUBLIC kimera_vio::kimera_vio)
+cs_add_executable(stereoVIOEuroc ./examples/KimeraVIO.cpp)
+target_link_libraries(stereoVIOEuroc ${PROJECT_NAME})
 
-############################### TESTS ##########################################
-### Add testing
-option(KIMERA_BUILD_TESTS "Build tests" ON)
-if(KIMERA_BUILD_TESTS)
-  # Download and unpack googletest at configure time
-  # TODO Consider doing the same for glog, gflags, although it might
-  # make the command `cmake ..` a bit slow.
-  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/gtest.cmake
-    external/googletest-download/CMakeLists.txt)
-  execute_process(COMMAND "${CMAKE_COMMAND}" -G "${CMAKE_GENERATOR}" .
-      WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external/googletest-download"
-      OUTPUT_QUIET)
-  execute_process(COMMAND "${CMAKE_COMMAND}" --build .
-      WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/external/googletest-download"
-      OUTPUT_QUIET)
-
-  # Prevent GoogleTest from overriding our compiler/linker options
-  # when building with Visual Studio
-  set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-
-  # Add googletest directly to our build. This adds
-  # the following targets: gtest, gtest_main, gmock
-  # and gmock_main
-  # Exclude these targets from installation with EXCLUDE_FROM_ALL
-  # Check issue: https://github.com/google/googletest/issues/868
-  add_subdirectory("${CMAKE_BINARY_DIR}/external/googletest-src"
-                   "${CMAKE_BINARY_DIR}/external/googletest-build"
-                   EXCLUDE_FROM_ALL)
-
-  # The gtest/gmock targets carry header search path
-  # dependencies automatically when using CMake 2.8.11 or
-  # later. Otherwise we have to add them here ourselves.
-  if(CMAKE_VERSION VERSION_LESS 2.8.11)
-      include_directories("${gtest_SOURCE_DIR}/include"
-                          "${gmock_SOURCE_DIR}/include")
-  endif()
-
-  # Generate gtests.
-  include(CTest)
-  add_executable(testKimeraVIO
-    tests/testKimeraVIO.cpp
-    tests/testStereoImuPipeline.cpp
-    tests/testEurocPlayground.cpp
-    tests/testCamera.cpp # NEEDS UPDATE
-    tests/testStereoCamera.cpp # NEEDS UPDATE
-    tests/testCameraParams.cpp
-    tests/testCodesignIdeas.cpp
-    tests/testDataProviderModule.cpp
-    tests/testFrame.cpp # NEEDS UPDATE
-    tests/testRgbdCamera.cpp
-    tests/testGeneralParallelPlaneRegularBasicFactor.cpp
-    tests/testGeneralParallelPlaneRegularTangentSpaceFactor.cpp
-    tests/testImuFrontend.cpp
-    tests/testImuParams.cpp
-    # tests/testKittiDataProvider.cpp # TODO
-    tests/testLoopClosureDetector.cpp
-    tests/testLogger.cpp
-    tests/testMesher.cpp # rotten
-    tests/testMesh.cpp
-    tests/testMeshUtils.cpp
-    tests/testMeshOptimization.cpp
-    tests/testParallelPlaneRegularBasicFactor.cpp
-    tests/testParallelPlaneRegularTangentSpaceFactor.cpp
-    tests/testPointPlaneFactor.cpp
-    #tests/testRegularVioBackend.cpp # rotten
-    tests/testRegularVioBackendParams.cpp
-    tests/testStereoFrame.cpp # NEEDS UPDATE
-    tests/testStereoVisionImuFrontend.cpp # NEEDS UPDATE
-    tests/testStereoMatcher.cpp
-    tests/testUndistortRectifier.cpp
-    tests/testThreadsafeImuBuffer.cpp
-    tests/testThreadsafeQueue.cpp
-    tests/testThreadsafeTemporalBuffer.cpp
-    tests/testTimer.cpp
-    tests/testTracker.cpp # NEEDS UPDATE
-    tests/testUtilsOpenCV.cpp
-    tests/testUtilsNumerical.cpp
-    tests/testInitializationFromImu.cpp
-    tests/testVioBackend.cpp
-    tests/testVioBackendParams.cpp
-    tests/testVioParams.cpp
-    tests/testVisionImuFrontendParams.cpp
-    tests/testFeatureDetectorParams.cpp
-    tests/testVisualizer3D.cpp # NEEDS UPDATE
-    tests/testOnlineAlignment.cpp
-    tests/testOpticalFlowPredictor.cpp
-    )
-  target_link_libraries(testKimeraVIO gtest kimera_vio::kimera_vio)
-
-  if(CMAKE_VERSION VERSION_LESS 3.10)
-    enable_testing()
-    include(FindGTest)
-    gtest_add_tests(testKimeraVIO "" AUTO)
-  else()
-    include(GoogleTest)
-    gtest_discover_tests(testKimeraVIO)
-  endif()
-endif(KIMERA_BUILD_TESTS)
 
 ############################### INSTALL/EXPORT #################################
 ## We install the export that we defined above
@@ -306,9 +197,9 @@ configure_package_config_file(
 
 option(EXPORT_KIMERA "Export kimera_vio instead of installing it." OFF)
 if(EXPORT_KIMERA)
-  export(TARGETS ${PROJECT_NAME}
+  cs_export(TARGETS ${PROJECT_NAME}
          FILE kimera_vioTargets.cmake)
-       export(PACKAGE ${PROJECT_NAME})
+         cs_export(PACKAGE ${PROJECT_NAME})
 else(EXPORT_KIMERA)
   include(GNUInstallDirs)
   ## First of all, we need to install the library itself.
