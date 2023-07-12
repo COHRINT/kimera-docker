@@ -32,7 +32,7 @@ This takes the current container you are working on and saves it to a new docker
 Navigate to the `catkin_ws` folder in a terminal and run:
 
 ```bash
-docker-compose up -d
+sudo docker compose up -d
 ```
 
 This starts up the kimera docker container. It also attatches the `catkin_ws/src` files from this directory to your container. This means you can change things in this directory in vscode and those changes will also be in the container.
@@ -40,10 +40,18 @@ This starts up the kimera docker container. It also attatches the `catkin_ws/src
 ### Connecting terminal to container
 
 ```bash
-docker-compose exec kimera bash
+sudo docker compose exec kimera bash
 ```
 
 This connects your terminal to the docker container so you can run commands in the docker contianer.
+
+## Terminating a container
+
+```bash
+exit
+```
+
+This ...
 
 ### Starting Kimera
 

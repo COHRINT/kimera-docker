@@ -24,8 +24,6 @@
 
 /scripts/*.yaml
 
-% Ignore large vocabulary files
-/vocabulary/*
 
 % Ignore python bytecode
 *.pyc

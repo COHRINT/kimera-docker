@@ -1,6 +1,6 @@
 services:
   kimera:
-    image: kimera-docker:0.2
+    image: oferdagan1982/kimera-docker:0.2
     network_mode: "host"
     volumes:
       - ./src:/root/catkin_ws/src
