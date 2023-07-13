@@ -49,6 +49,8 @@ This connects your terminal to the docker container so you can run commands in t
 
 ```bash
 exit
+
+sudo docker compose exec kimera bash
 ```
 
 This ...
