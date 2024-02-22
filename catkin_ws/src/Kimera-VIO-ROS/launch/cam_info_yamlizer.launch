@@ -1,14 +1,14 @@
 <launch>
-  <arg name="dataset_name" default="uHumans2"/>
+  <arg name="dataset_name" default="multi_slam_tracking"/>
 
   <!-- Frame IDs -->
-  <arg name="base_link_frame_id" value="base_link_gt"/>
-  <arg name="left_cam_frame_id"  value="left_cam"/>
-  <arg name="right_cam_frame_id" value="right_cam"/>
+  <arg name="base_link_frame_id" value="tars/base_link"/>
+  <arg name="left_cam_frame_id"  value="tars/camera_link_left"/>
+  <arg name="right_cam_frame_id" value="tars/camera_link_left"/>
 
   <!-- ROS Topics -->
-  <arg name="left_cam_info_topic"  value="/tesse/left_cam/camera_info"/>
-  <arg name="right_cam_info_topic" value="/tesse/right_cam/camera_info"/>
+  <arg name="left_cam_info_topic"  value="/tars/camera/left/camera_info"/>
+  <arg name="right_cam_info_topic" value="/tars/camera/right/camera_info"/>
 
   <node pkg="kimera_vio_ros" type="camera_info_yamlizer_node.py"
         name="cam_info_yamelizer" output="screen">

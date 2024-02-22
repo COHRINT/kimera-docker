@@ -1,0 +1,20 @@
+%YAML:1.0
+# General sensor definitions.
+camera_id: left_cam
+
+# Semspr extrinsics wrt. the body-frame
+T_BS:
+  cols: 4
+  rows: 4
+  data: [1.0, 0.0, 0.0, 0.18, 
+         0.0, 1.0, 0.0, 0.1, 
+         0.0, 0.0, 1.0, 0.21, 
+         0.0, 0.0, 0.0, 1.0]  
+
+# Camera specific definitions.
+rate_hz: 30
+resolution: [752, 480]
+camera_model: pinhole
+intrinsics: [448.1008985853343, 448.1008985853343, 376.5, 240.5]
+distortion_model: plumb_bob
+distortion_coefficients: [0.0, 0.0, 0.0, 0.0]

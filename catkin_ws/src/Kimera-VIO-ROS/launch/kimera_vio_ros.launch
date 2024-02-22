@@ -64,6 +64,11 @@
   <!-- Only here for convenience -->
   <arg name="run_stereo_dense"     default="false"/>
 
+  <!-- For debugging: make sure arguments are being passed into launch file correctly -->
+  <!-- <node name="pub_arg" pkg="rostopic" type="rostopic"
+     args="pub /arg std_msgs/String '$(arg imu_topic)'"
+     output="screen" /> -->
+
   <!-- Launch main node  -->
   <node name="kimera_vio_ros_node" pkg="kimera_vio_ros" type="kimera_vio_ros_node"
         output="screen" ns="kimera_vio_ros"

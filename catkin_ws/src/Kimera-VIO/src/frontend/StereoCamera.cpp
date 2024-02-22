@@ -314,6 +314,33 @@ void StereoCamera::computeRectificationParameters(
   // https://github.com/opencv/opencv/issues/7240 for this issue with kAlpha
   // Setting to -1 to make it easy, but it should NOT be -1!
   static constexpr int kAlpha = 0;
+
+  // Display inputs
+  std::cout << "Left K:" << std::endl;
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      std::cout << left_cam_params.K_.at<double>(i, j) << " ";
+    }
+    std::cout << std::endl;
+  }
+  std::cout << "Right K:" << std::endl;
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      std::cout << right_cam_params.K_.at<double>(i, j) << " ";
+    }
+    std::cout << std::endl;
+  }
+  std::cout << "Left Distortion Params:" << std::endl;
+  std::cout << left_cam_params.distortion_coeff_mat_ << std::endl;
+  std::cout << "Right Distortion Params:" << std::endl;
+  std::cout << right_cam_params.distortion_coeff_mat_ << std::endl;
+  std::cout << "Image Size:" << std::endl;
+  std::cout << left_cam_params.image_size_ << std::endl;
+  std::cout << "camL_Rot_camR:" << std::endl;
+  std::cout << camL_Rot_camR << std::endl;
+  std::cout << "camL_Tran_camR" << std::endl;
+  std::cout << camL_Tran_camR << std::endl;
+
   switch (left_cam_params.distortion_model_) {
     case DistortionModel::RADTAN: {
       cv::stereoRectify(
@@ -361,6 +388,18 @@ void StereoCamera::computeRectificationParameters(
                  << VIO::to_underlying(left_cam_params.distortion_model_);
     }
   }
+
+  // Display outputs
+  std::cout << "R1" << std::endl;
+  std::cout << *R1 << std::endl;
+  std::cout << "R2" << std::endl;
+  std::cout << *R2 << std::endl;
+  std::cout << "P1" << std::endl;
+  std::cout << *P1 << std::endl;
+  std::cout << "P2" << std::endl;
+  std::cout << *P2 << std::endl;
+  std::cout << "Q" << std::endl;
+  std::cout << *Q << std::endl;
 }
 
 }  // namespace VIO
