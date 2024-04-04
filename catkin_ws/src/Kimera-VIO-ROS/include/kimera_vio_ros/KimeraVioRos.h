@@ -43,6 +43,8 @@ class KimeraVioRos {
    */
   bool restartKimeraVio(std_srvs::Trigger::Request& request,
                         std_srvs::Trigger::Response& response);
+  bool extractFactors(std_srvs::Trigger::Request& request,
+                      std_srvs::Trigger::Response& response);
 
  protected:
   //! ROS
@@ -59,6 +61,7 @@ class KimeraVioRos {
 
   //! ROS Services
   ros::ServiceServer restart_vio_pipeline_srv_;
+  ros::ServiceServer extract_factors_srv_;
   std::atomic_bool restart_vio_pipeline_;
 };
 

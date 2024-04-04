@@ -38,10 +38,13 @@ KimeraVioRos::KimeraVioRos()
       ros_visualizer_(nullptr),
       data_provider_(nullptr),
       restart_vio_pipeline_srv_(),
+      extract_factors_srv_(),
       restart_vio_pipeline_(false) {
   // Add rosservice to restart VIO pipeline if requested.
   restart_vio_pipeline_srv_ = nh_private_.advertiseService(
       "restart_kimera_vio", &KimeraVioRos::restartKimeraVio, this);
+  extract_factors_srv_ = nh_private_.advertiseService(
+      "extract_factors", &KimeraVioRos::extractFactors, this);
 
   // Parse VIO parameters
   std::string params_folder_path;
@@ -259,6 +262,12 @@ bool KimeraVioRos::restartKimeraVio(std_srvs::Trigger::Request& request,
     response.success = false;
   }
   LOG(WARNING) << response.message;
+  return true;
+}
+
+bool KimeraVioRos::extractFactors(std_srvs::Trigger::Request& request,
+                                  std_srvs::Trigger::Response& response) {
+  vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->getFactors().print("Smoother's factors:\n[\n\t");
   return true;
 }
 
