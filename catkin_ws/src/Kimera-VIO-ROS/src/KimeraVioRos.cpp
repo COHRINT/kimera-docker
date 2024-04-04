@@ -100,6 +100,13 @@ bool KimeraVioRos::runKimeraVio() {
   
   CHECK(vio_pipeline_) << "Vio pipeline construction failed.";
 
+  std::cout << "Pipeline Testing Stuff: ";
+  std::cout << vio_pipeline_.get() << std::endl;
+  std::cout << vio_pipeline_->vio_backend_module_.get() << std::endl;
+  std::cout << vio_pipeline_->vio_backend_module_->vio_backend_.get() << std::endl;
+  std::cout << vio_pipeline_->vio_backend_module_->vio_backend_->smoother_.get() << std::endl;
+  vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->getFactors().print("Smoother's factors:\n[\n\t");
+
   // Finally, connect data_provider and vio_pipeline
   VLOG(1) << "Connecting Vio Pipeline and Data Provider.";
   connectVIO();

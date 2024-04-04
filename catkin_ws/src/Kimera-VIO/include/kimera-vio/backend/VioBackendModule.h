@@ -67,7 +67,7 @@ class VioBackendModule
   void registerImuBiasUpdateCallback(
       const VioBackend::ImuBiasCallback& imu_bias_update_callback);
 
- protected:
+ public:
   const VioBackend::UniquePtr vio_backend_;
 };
 

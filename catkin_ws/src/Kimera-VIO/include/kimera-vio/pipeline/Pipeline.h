@@ -225,6 +225,11 @@ class Pipeline {
   virtual void joinThread(const std::string& thread_name,
                           std::thread* thread);
 
+ public:
+  //! Backend
+  VioBackendModule::UniquePtr vio_backend_module_;
+
+
  protected:
   // VIO parameters
   //! Mind that the Backend params is shared with the dataprovider which might
@@ -248,8 +253,8 @@ class Pipeline {
   //! Vision Frontend payloads.
   VisionImuFrontendModule::InputQueue frontend_input_queue_;
 
-  //! Backend
-  VioBackendModule::UniquePtr vio_backend_module_;
+  // //! Backend
+  // VioBackendModule::UniquePtr vio_backend_module_;
 
   //! Thread-safe queue for the Backend.
   VioBackendModule::InputQueue backend_input_queue_;

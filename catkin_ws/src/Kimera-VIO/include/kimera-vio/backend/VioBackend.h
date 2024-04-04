@@ -426,6 +426,10 @@ class VioBackend {
   inline int getLandmarkCount() const { return landmark_count_; }
   inline DebugVioInfo getCurrentDebugVioInfo() const { return debug_info_; }
 
+ public:
+  // ISAM2 smoother
+  std::unique_ptr<Smoother> smoother_;
+
  protected:
   // Raw, user-specified params.
   const BackendParams backend_params_;
@@ -456,8 +460,8 @@ class VioBackend {
   //!< current state of the system.
   gtsam::Values state_;
 
-  // ISAM2 smoother
-  std::unique_ptr<Smoother> smoother_;
+//   // ISAM2 smoother
+//   std::unique_ptr<Smoother> smoother_;
 
   // Values
   //!< new states to be added
