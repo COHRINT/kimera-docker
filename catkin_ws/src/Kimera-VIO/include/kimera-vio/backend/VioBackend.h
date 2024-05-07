@@ -429,6 +429,8 @@ class VioBackend {
  public:
   // ISAM2 smoother
   std::unique_ptr<Smoother> smoother_;
+  //! Current keyframe id.
+  int curr_kf_id_;
 
  protected:
   // Raw, user-specified params.
@@ -484,8 +486,6 @@ class VioBackend {
   // Counters.
   //! Last keyframe id.
   int last_kf_id_;
-  //! Current keyframe id.
-  int curr_kf_id_;
 
   // Imu Bias update callback. To be called as soon as we have a new IMU bias
   // update so that the Frontend performs preintegration with the newest bias.

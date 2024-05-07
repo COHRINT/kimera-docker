@@ -14,6 +14,19 @@
 #include "kimera_vio_ros/RosDisplay.h"
 #include "kimera_vio_ros/RosVisualizer.h"
 
+#include "kimera_vio_ros/request_factors.h"
+
+#include <gtsam/nonlinear/Values.h>
+#include <gtsam/inference/Key.h>
+#include <gtsam/nonlinear/Marginals.h>
+#include <gtsam/nonlinear/NonlinearFactorGraph.h>
+#include <gtsam/base/Matrix.h>
+
+#include <stdio.h>
+
+using SymbolChar = unsigned char;
+static constexpr SymbolChar kPoseSymbolChar = 'x';
+
 namespace VIO {
 
 class KimeraVioRos {
@@ -43,8 +56,8 @@ class KimeraVioRos {
    */
   bool restartKimeraVio(std_srvs::Trigger::Request& request,
                         std_srvs::Trigger::Response& response);
-  bool extractFactors(std_srvs::Trigger::Request& request,
-                      std_srvs::Trigger::Response& response);
+  bool extractFactors(kimera_vio_ros::request_factors::Request& request,
+                      kimera_vio_ros::request_factors::Response& response);
 
  protected:
   //! ROS

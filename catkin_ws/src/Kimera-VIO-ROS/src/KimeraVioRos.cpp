@@ -27,6 +27,7 @@
 #include "kimera_vio_ros/RosBagDataProvider.h"
 #include "kimera_vio_ros/RosDataProviderInterface.h"
 #include "kimera_vio_ros/RosOnlineDataProvider.h"
+#include "kimera_vio_ros/request_factors.h"
 
 namespace VIO {
 
@@ -265,9 +266,77 @@ bool KimeraVioRos::restartKimeraVio(std_srvs::Trigger::Request& request,
   return true;
 }
 
-bool KimeraVioRos::extractFactors(std_srvs::Trigger::Request& request,
-                                  std_srvs::Trigger::Response& response) {
-  vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->getFactors().print("Smoother's factors:\n[\n\t");
+bool KimeraVioRos::extractFactors(kimera_vio_ros::request_factors::Request& request,
+                                  kimera_vio_ros::request_factors::Response& response) {
+  // For initial development 
+  std::cout << "DEVELOPING\n";
+  // vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->getFactors().print("Smoother's factors:\n[\n\t");
+  // response.matrixDim = 3;
+  // response.cur_key = 13;
+
+  // Extract requested keys and convert to long int (required data type for gtsam)
+  std::vector<short int> key_idxs = request.timeSteps;
+
+  // Extract current kimera timestep
+  int cur_time_step = vio_pipeline_->vio_backend_module_->vio_backend_->curr_kf_id_;
+  response.cur_key = cur_time_step;
+
+  // Calculate latest estimate
+  gtsam::Values estimate = vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->calculateEstimate();
+  // estimate.print("Smoother's estimate: \n[\n\t");
+
+  // Create vector of keys corresponding to requested time steps
+  gtsam::KeyVector req_keys;
+  for (int i = 0; i < key_idxs.size(); i++) {
+    req_keys.push_back(gtsam::Symbol(kPoseSymbolChar, key_idxs.at(i)));
+  }
+  req_keys.push_back(gtsam::Symbol(kPoseSymbolChar, cur_time_step)); // Also include current time step
+
+  // Extract factors
+  gtsam::NonlinearFactorGraph factors = vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->getFactors();
+  // factors.print("Smoother's factors: \n[\n\t");
+
+  if (!req_keys.empty()) {
+    // Check to see if all keys exist in kimera factor graph
+    for (int i = 0; i < req_keys.size(); i++) {
+      if (!estimate.exists(req_keys.at(i))) {
+        return true;
+      }
+    }
+
+    // Create instance of marginals class
+    gtsam::Marginals curMarginal(factors, estimate, gtsam::Marginals::Factorization::CHOLESKY);
+
+    // Compute joint marginal covariance
+    gtsam::JointMarginal curJointMarginal = curMarginal.jointMarginalCovariance(req_keys);
+    gtsam::Matrix curJointCovarianceMatrix = curJointMarginal.fullMatrix();
+
+    // Add covariance matrix to ROS message
+    std::vector<int> indexList = {3, 4};
+    if (req_keys.size()==2) {
+        indexList = {3, 4, 9, 10};
+    }
+    response.matrixDim = indexList.size();
+
+    for (int row : indexList) {
+        for (int col : indexList) {
+            response.infMat.push_back(curJointCovarianceMatrix(row,col));
+            std::cout << curJointCovarianceMatrix(row,col) << " ";
+        }
+    }
+
+    // Add means to ROS message
+    for (int i = 0; i < req_keys.size(); i++) {
+        Pose3 curEstimate = estimate.at<Pose3>(req_keys.at(i));
+        // res.infVec.push_back(curEstimate.rotation().roll());
+        // res.infVec.push_back(curEstimate.rotation().pitch());
+        // res.infVec.push_back(curEstimate.rotation().yaw());
+        response.infVec.push_back(curEstimate.translation().x());
+        response.infVec.push_back(curEstimate.translation().y());
+        // res.infVec.push_back(curEstimate.translation().z());
+    }
+  }
+
   return true;
 }
 
