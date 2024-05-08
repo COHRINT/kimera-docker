@@ -15,6 +15,7 @@
 #include "kimera_vio_ros/RosVisualizer.h"
 
 #include "kimera_vio_ros/request_factors.h"
+#include "kimera_vio_ros/Track2Slam.h"
 
 #include <gtsam/nonlinear/Values.h>
 #include <gtsam/inference/Key.h>
@@ -58,6 +59,12 @@ class KimeraVioRos {
                         std_srvs::Trigger::Response& response);
   bool extractFactors(kimera_vio_ros::request_factors::Request& request,
                       kimera_vio_ros::request_factors::Response& response);
+  
+  void Track2SlamCallback(const kimera_vio_ros::Track2Slam::ConstPtr& msgIn);
+
+  gtsam::Matrix reshapeMatrix(const std::vector<double>& flattened, 
+                              int rows, 
+                              int columns);
 
  protected:
   //! ROS
@@ -76,6 +83,9 @@ class KimeraVioRos {
   ros::ServiceServer restart_vio_pipeline_srv_;
   ros::ServiceServer extract_factors_srv_;
   std::atomic_bool restart_vio_pipeline_;
+
+  // Ros subscribers
+  ros::Subscriber subT2S; // Tracking to SLAM messages
 };
 
 }  // namespace VIO

@@ -28,6 +28,7 @@
 #include "kimera_vio_ros/RosDataProviderInterface.h"
 #include "kimera_vio_ros/RosOnlineDataProvider.h"
 #include "kimera_vio_ros/request_factors.h"
+#include "kimera_vio_ros/Track2Slam.h"
 
 namespace VIO {
 
@@ -46,6 +47,9 @@ KimeraVioRos::KimeraVioRos()
       "restart_kimera_vio", &KimeraVioRos::restartKimeraVio, this);
   extract_factors_srv_ = nh_private_.advertiseService(
       "extract_factors", &KimeraVioRos::extractFactors, this);
+
+  // Create ROS subscribers
+  subT2S = nh_private_.subscribe<kimera_vio_ros::Track2Slam>("T2S_chatter", 1, &KimeraVioRos::Track2SlamCallback, this, ros::TransportHints().tcpNoDelay());
 
   // Parse VIO parameters
   std::string params_folder_path;
@@ -338,6 +342,48 @@ bool KimeraVioRos::extractFactors(kimera_vio_ros::request_factors::Request& requ
   }
 
   return true;
+}
+
+gtsam::Matrix KimeraVioRos::reshapeMatrix(const std::vector<double>& flattened, 
+                            int rows, 
+                            int columns) {
+  int size = rows * columns;
+  
+  // Matrix reshaped(rows, std::vector<double>(columns));
+  gtsam::Matrix reshaped(rows, columns);
+  
+  for (int i = 0; i < size; ++i) {
+      int row_i = i / columns;
+      int col_j = i % columns;
+      // reshaped(row, col) = flattened[i];
+      reshaped.row(row_i)[col_j] = flattened[i];
+  }
+  
+  return reshaped;
+}
+
+void KimeraVioRos::Track2SlamCallback(const kimera_vio_ros::Track2Slam::ConstPtr& msgIn) {
+  std::cout << "\nCheckpoint add Factors from Tracking\n"<< std::endl;
+
+  std::vector<double> covMatflat(msgIn->covMat.begin(), msgIn->covMat.end());
+  std::vector<double> meanVecflat(msgIn->meanVec.begin(), msgIn->meanVec.end());
+  std::vector<short> indexVec(msgIn->dims.begin(), msgIn->dims.end());
+  // std::vector<short> indexVec;
+  // for (int i = 0; i < msgIn->dims.size(); i++) {
+  //     indexVec.push_back(static_cast<short>(msgIn->dims[i]));
+  // }
+
+  std::cout << "Received Track2Slam Message:" << std::endl;
+  std::cout << "MatrixDim: " << msgIn->matrixDim << std::endl;
+
+  int rows = msgIn->matrixDim;
+  int columns = msgIn->matrixDim;
+
+  gtsam::Matrix infoMatrix = reshapeMatrix(covMatflat, rows, columns);
+  gtsam::Matrix infoVec = reshapeMatrix(meanVecflat, rows, 1);
+
+  // Add factor to graph
+  vio_pipeline_->vio_backend_module_->vio_backend_->addFactorFromTracking(infoMatrix, infoVec, indexVec);
 }
 
 }  // namespace VIO

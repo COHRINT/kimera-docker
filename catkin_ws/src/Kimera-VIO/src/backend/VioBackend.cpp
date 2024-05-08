@@ -45,6 +45,8 @@
 #include "kimera-vio/utils/Timer.h"
 #include "kimera-vio/utils/UtilsNumerical.h"
 
+#include "kimera-vio/custom_factors/Point2UnaryFactorInformation.h"
+
 DEFINE_bool(debug_graph_before_opt,
             false,
             "Store factor graph before optimization for later printing if the "
@@ -2100,6 +2102,82 @@ bool VioBackend::deleteLmkFromFeatureTracks(const LandmarkId& lmk_id) {
     return true;
   }
   return false;
+}
+
+/* -------------------------------------------------------------------------- */
+// Helper function for ???
+std::pair<gtsam::Vector, gtsam::Matrix> VioBackend::extractSubset(
+    const gtsam::Matrix& jointVector, 
+    const gtsam::Matrix& jointMatrix,
+    Eigen::Index startRow, 
+    Eigen::Index endRow,
+    Eigen::Index startCol, 
+    Eigen::Index endCol) { 
+
+  size_t subsetRows = endRow - startRow ;
+  size_t subsetCols = endCol - startCol ;
+
+  // Vector subsetVector(jointVector.begin() + startRow, jointVector.begin() + endRow + 1);
+
+  gtsam::Matrix subsetMatrix = jointMatrix.block(startRow, startCol, subsetRows, subsetCols);
+  gtsam::Vector subsetVector = jointVector.block(startRow, 0, subsetRows, 1);
+  
+  return std::make_pair(subsetVector, subsetMatrix);
+}
+
+// Function to add factors to kimera factor graph
+void VioBackend::addFactorFromTracking(
+    gtsam::Matrix infoMatrix,
+    gtsam::Matrix infoVec,
+    std::vector<short> indexVec) {
+
+  // Setup stuff
+  int rows = infoMatrix.rows();
+  int nx = 2;
+  int n = rows/nx;
+
+  // Generate unary factors from the diagonal terms
+  for (int i = 0; i<n; i++){
+    std::cout << "\nCheckpoint 2\n";
+    std::cout << i << " ";
+
+    size_t startRow = nx*i;
+    size_t endRow = nx*(i+1);
+    size_t startCol = nx*i;
+    size_t endCol = nx*(i+1);
+    
+    // ********************************************
+    // std::cout << "Index: " << indexVec[i] << std::endl;
+
+    // auto subset = extractSubset(meanVec, covMatrix, startRow, endRow, startCol, endCol);
+    
+    // Vector& margMean = subset.first;
+    // Matrix& margCov = subset.second;
+
+    auto subset = extractSubset(infoVec, infoMatrix, startRow, endRow, startCol, endCol);
+
+    gtsam::Vector& margInfoVec = subset.first;
+    gtsam::Matrix& margInfoMat = subset.second;
+
+    std::cout << "\nEigen print:" << std::endl;
+    
+    // std::cout << "\nm =" << std::endl << margCov << std::endl;
+
+    // std::cout << "\nv =" << std::endl << margMean << std::endl;
+
+    std::cout << "\nm =" << std::endl << margInfoMat << std::endl;
+
+    std::cout << "\nv =" << std::endl << margInfoVec << std::endl;
+
+    
+    // noiseModel::Gaussian::shared_ptr mainDiagBlock = noiseModel::Gaussian::Covariance(margCov);
+    
+    // gtSAMgraph.add(Point2UnaryFactor(indexVec[i], Point2(margMean(0), margMean(1)), mainDiagBlock));
+
+    // noiseModel::Gaussian::shared_ptr mainDiagBlock = noiseModel::Gaussian::Information(margCov);
+    
+    new_imu_prior_and_other_factors_.push_back(Point2UnaryFactorInformation(indexVec[i], margInfoMat, margInfoVec ));
+  } 
 }
 
 }  // namespace VIO.

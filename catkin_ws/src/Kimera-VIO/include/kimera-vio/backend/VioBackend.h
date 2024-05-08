@@ -183,6 +183,19 @@ class VioBackend {
     smoother_->getFactors().saveGraph(ofstream_wrapper.ofstream_);
   }
 
+  std::pair<gtsam::Vector, gtsam::Matrix> extractSubset(
+      const gtsam::Matrix& jointVector,
+      const gtsam::Matrix& jointMatrix,
+      Eigen::Index startRow, 
+      Eigen::Index endRow,
+      Eigen::Index startCol, 
+      Eigen::Index endCol);
+
+  void addFactorFromTracking(
+      gtsam::Matrix infoMatrix,
+      gtsam::Matrix infoVec,
+      std::vector<short> indexVec);
+
  protected:
   enum class BackendState {
     Bootstrap = 0u,  //! Initialize Backend
