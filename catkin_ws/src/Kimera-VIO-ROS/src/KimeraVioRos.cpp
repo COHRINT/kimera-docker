@@ -46,10 +46,10 @@ KimeraVioRos::KimeraVioRos()
   restart_vio_pipeline_srv_ = nh_private_.advertiseService(
       "restart_kimera_vio", &KimeraVioRos::restartKimeraVio, this);
   extract_factors_srv_ = nh_private_.advertiseService(
-      "extract_factors", &KimeraVioRos::extractFactors, this);
+      "tars/extract_factors", &KimeraVioRos::extractFactors, this);
 
   // Create ROS subscribers
-  subT2S = nh_private_.subscribe<kimera_vio_ros::Track2Slam>("T2S_chatter", 1, &KimeraVioRos::Track2SlamCallback, this, ros::TransportHints().tcpNoDelay());
+  subT2S = nh_private_.subscribe<kimera_vio_ros::Track2Slam>("T2S_chatter_tars", 1, &KimeraVioRos::Track2SlamCallback, this, ros::TransportHints().tcpNoDelay());
 
   // Parse VIO parameters
   std::string params_folder_path;
