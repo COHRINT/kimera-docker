@@ -285,6 +285,12 @@ bool KimeraVioRos::extractFactors(kimera_vio_ros::request_factors::Request& requ
   int cur_time_step = vio_pipeline_->vio_backend_module_->vio_backend_->curr_kf_id_;
   response.cur_key = cur_time_step;
 
+  std::cout << "REQUESTED KEYS:\n";
+  for (int i = 0; i < key_idxs.size(); i++) {
+    std::cout << key_idxs.at(i) << " ";
+  }
+  std::cout << cur_time_step << "\n\n";
+
   // Calculate latest estimate
   gtsam::Values estimate = vio_pipeline_->vio_backend_module_->vio_backend_->smoother_->calculateEstimate();
   // estimate.print("Smoother's estimate: \n[\n\t");
