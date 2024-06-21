@@ -149,7 +149,7 @@ bool KimeraVioRos::spin() {
     ros::Rate rate(20);  // 20 Hz
     while (ros::ok() && !restart_vio_pipeline_) {
       // Print stats at 1hz
-      LOG_EVERY_N(INFO, 20) << vio_pipeline_->printStatistics();
+      LOG_EVERY_N(INFO, 100) << vio_pipeline_->printStatistics();
       // Mind that if ROS is using sim_time, this will block if /clock
       // is not published (i.e. when pausing the rosbag).
       rate.sleep();
