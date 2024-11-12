@@ -45,7 +45,7 @@
 #include "kimera-vio/utils/Timer.h"
 #include "kimera-vio/utils/UtilsNumerical.h"
 
-#include "kimera-vio/custom_factors/Point2UnaryFactorInformation.h"
+#include "kimera-vio/custom_factors/Point2UnaryFactorInformation2.h"
 
 DEFINE_bool(debug_graph_before_opt,
             false,
@@ -2176,7 +2176,7 @@ void VioBackend::addFactorFromTracking(
 
     // noiseModel::Gaussian::shared_ptr mainDiagBlock = noiseModel::Gaussian::Information(margCov);
     
-    new_imu_prior_and_other_factors_.push_back(Point2UnaryFactorInformation(indexVec[i], margInfoMat, margInfoVec ));
+    new_imu_prior_and_other_factors_.push_back(Point2UnaryFactorInformation2(indexVec[i], margInfoMat, margInfoVec ));
   } 
 }
 
