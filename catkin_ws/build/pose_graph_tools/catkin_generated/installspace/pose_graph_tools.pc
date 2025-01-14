@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/install
+
+Name: pose_graph_tools
+Description: Description of pose_graph_tools
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lpose_graph_tools
+Requires: roscpp message_generation message_runtime std_msgs geometry_msgs sensor_msgs visualization_msgs interactive_markers

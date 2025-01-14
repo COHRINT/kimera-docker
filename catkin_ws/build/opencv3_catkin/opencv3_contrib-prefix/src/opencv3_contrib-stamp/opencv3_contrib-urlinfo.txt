@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://github.com/opencv/opencv_contrib/archive/3.4.2.zip'
+tag='MD5=171a0c9eabbdc3332164de6221684beb'

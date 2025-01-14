@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/install
+
+Name: lio_sam
+Description: Description of lio_sam
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs nav_msgs geometry_msgs sensor_msgs message_runtime message_generation visualization_msgs

@@ -1,0 +1,36 @@
+
+(cl:in-package :asdf)
+
+(defsystem "pose_graph_tools-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :geometry_msgs-msg
+               :sensor_msgs-msg
+               :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "BowQueries" :depends-on ("_package_BowQueries"))
+    (:file "_package_BowQueries" :depends-on ("_package"))
+    (:file "BowQuery" :depends-on ("_package_BowQuery"))
+    (:file "_package_BowQuery" :depends-on ("_package"))
+    (:file "BowRequests" :depends-on ("_package_BowRequests"))
+    (:file "_package_BowRequests" :depends-on ("_package"))
+    (:file "BowVector" :depends-on ("_package_BowVector"))
+    (:file "_package_BowVector" :depends-on ("_package"))
+    (:file "LoopClosures" :depends-on ("_package_LoopClosures"))
+    (:file "_package_LoopClosures" :depends-on ("_package"))
+    (:file "LoopClosuresAck" :depends-on ("_package_LoopClosuresAck"))
+    (:file "_package_LoopClosuresAck" :depends-on ("_package"))
+    (:file "PoseGraph" :depends-on ("_package_PoseGraph"))
+    (:file "_package_PoseGraph" :depends-on ("_package"))
+    (:file "PoseGraphEdge" :depends-on ("_package_PoseGraphEdge"))
+    (:file "_package_PoseGraphEdge" :depends-on ("_package"))
+    (:file "PoseGraphNode" :depends-on ("_package_PoseGraphNode"))
+    (:file "_package_PoseGraphNode" :depends-on ("_package"))
+    (:file "TimeRangeQuery" :depends-on ("_package_TimeRangeQuery"))
+    (:file "_package_TimeRangeQuery" :depends-on ("_package"))
+    (:file "VLCFrameMsg" :depends-on ("_package_VLCFrameMsg"))
+    (:file "_package_VLCFrameMsg" :depends-on ("_package"))
+    (:file "VLCFrames" :depends-on ("_package_VLCFrames"))
+    (:file "_package_VLCFrames" :depends-on ("_package"))
+    (:file "VLCRequests" :depends-on ("_package_VLCRequests"))
+    (:file "_package_VLCRequests" :depends-on ("_package"))
+  ))

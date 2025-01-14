@@ -1,0 +1,8 @@
+[01m[K/home/cohrint/kimera-docker/catkin_ws/src/kimera_rviz_markers/src/kimera_rviz_markers.cpp:[m[K In function ‘[01m[Kvisualization_msgs::Marker krm::makeMesh()[m[K’:
+[01m[K/home/cohrint/kimera-docker/catkin_ws/src/kimera_rviz_markers/src/kimera_rviz_markers.cpp:99:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   99 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/cohrint/kimera-docker/catkin_ws/src/kimera_rviz_markers/src/kimera_rviz_markers.cpp:[m[K In function ‘[01m[Kvisualization_msgs::Marker krm::makeMesh()[m[K’:
+[01m[K/home/cohrint/kimera-docker/catkin_ws/src/kimera_rviz_markers/src/kimera_rviz_markers.cpp:99:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   99 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

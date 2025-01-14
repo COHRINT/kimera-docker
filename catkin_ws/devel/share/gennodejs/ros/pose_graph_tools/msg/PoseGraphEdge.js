@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/pose_graph_tools/share/gennodejs/ros/pose_graph_tools/msg/PoseGraphEdge.js

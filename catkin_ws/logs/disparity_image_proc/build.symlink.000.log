@@ -1,0 +1,4 @@
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/share/disparity_image_proc/cmake/disparity_image_procConfig-version.cmake
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/share/disparity_image_proc/cmake/disparity_image_procConfig.cmake
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/lib/libdisparity_image_proc.so
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/lib/pkgconfig/disparity_image_proc.pc

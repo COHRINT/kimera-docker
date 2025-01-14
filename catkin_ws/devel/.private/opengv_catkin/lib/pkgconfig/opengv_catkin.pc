@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/devel/.private/opengv_catkin
+
+Name: opengv_catkin
+Description: Description of opengv_catkin
+Version: 0.0.1
+Cflags: -I/home/cohrint/kimera-docker/catkin_ws/devel/.private/opengv_catkin/include
+Libs: -L${prefix}/lib -lopengv
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/devel/.private/opencv3_catkin
+
+Name: opencv3_catkin
+Description: Description of opencv3_catkin
+Version: 3.4.2
+Cflags: -I/home/cohrint/kimera-docker/catkin_ws/devel/.private/opencv3_catkin/include
+Libs: -L${prefix}/lib -lopencv_aruco -lopencv_calib3d -lopencv_core -lopencv_features2d -lopencv_flann -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_line_descriptor -lopencv_ml -lopencv_objdetect -lopencv_phase_unwrapping -lopencv_photo -lopencv_rgbd -lopencv_saliency -lopencv_shape -lopencv_stitching -lopencv_superres -lopencv_video -lopencv_videoio -lopencv_videostab -lopencv_viz -lopencv_xfeatures2d -lopencv_ximgproc
+Requires: 

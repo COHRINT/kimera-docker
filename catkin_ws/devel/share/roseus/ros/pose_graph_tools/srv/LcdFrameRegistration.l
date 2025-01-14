@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/pose_graph_tools/share/roseus/ros/pose_graph_tools/srv/LcdFrameRegistration.l

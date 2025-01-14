@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/devel/.private/disparity_image_proc
+
+Name: disparity_image_proc
+Description: Description of disparity_image_proc
+Version: 1.12.5
+Cflags: 
+Libs: -L${prefix}/lib -ldisparity_image_proc
+Requires: image_geometry image_proc sensor_msgs stereo_msgs

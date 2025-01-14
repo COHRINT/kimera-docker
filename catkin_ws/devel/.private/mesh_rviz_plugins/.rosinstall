@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/cohrint/kimera-docker/catkin_ws/devel/.private/mesh_rviz_plugins/setup.sh

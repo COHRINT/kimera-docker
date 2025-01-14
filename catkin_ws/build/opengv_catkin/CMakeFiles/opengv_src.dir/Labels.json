@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/CMakeFiles/opengv_src"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/CMakeFiles/opengv_src.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/CMakeFiles/opengv_src-complete.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-install.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-mkdir.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-download.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-update.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-patch.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-configure.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opengv_catkin/opengv_src-prefix/src/opengv_src-stamp/opengv_src-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"opengv_src"
+		],
+		"name" : "opengv_src"
+	}
+}

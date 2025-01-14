@@ -1,0 +1,2 @@
+set(pose_graph_tools_MESSAGE_FILES "msg/BowQueries.msg;msg/BowQuery.msg;msg/BowRequests.msg;msg/BowVector.msg;msg/LoopClosures.msg;msg/LoopClosuresAck.msg;msg/PoseGraph.msg;msg/PoseGraphEdge.msg;msg/PoseGraphNode.msg;msg/TimeRangeQuery.msg;msg/VLCFrameMsg.msg;msg/VLCFrames.msg;msg/VLCRequests.msg")
+set(pose_graph_tools_SERVICE_FILES "srv/LcdFrameRegistration.srv;srv/PoseGraphQuery.srv;srv/VLCFrameQuery.srv")

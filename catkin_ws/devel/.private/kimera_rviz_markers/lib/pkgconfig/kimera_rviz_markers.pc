@@ -1,0 +1,8 @@
+prefix=/home/cohrint/kimera-docker/catkin_ws/devel/.private/kimera_rviz_markers
+
+Name: kimera_rviz_markers
+Description: Description of kimera_rviz_markers
+Version: 0.0.0
+Cflags: -I/home/cohrint/kimera-docker/catkin_ws/src/kimera_rviz_markers/include
+Libs: -L${prefix}/lib -lkimera_rviz_markers
+Requires: roscpp interactive_markers visualization_msgs tf

@@ -1,0 +1,359 @@
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7ce79/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7ce79.dir/build.make CMakeFiles/cmTC_7ce79.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7ce79.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes -o CMakeFiles/cmTC_7ce79.dir/src.cxx.o -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_7ce79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ce79.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_7ce79.dir/src.cxx.o  -o cmTC_7ce79 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_90aea/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_90aea.dir/build.make CMakeFiles/cmTC_90aea.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_90aea.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes -o CMakeFiles/cmTC_90aea.dir/src.cxx.o -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_90aea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90aea.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_90aea.dir/src.cxx.o  -o cmTC_90aea 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5136d/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5136d.dir/build.make CMakeFiles/cmTC_5136d.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5136d.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_5136d.dir/src.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_5136d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5136d.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_5136d.dir/src.c.o  -o cmTC_5136d 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wsuggest-override'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_58cc9/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_58cc9.dir/build.make CMakeFiles/cmTC_58cc9.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58cc9.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wsuggest-override -o CMakeFiles/cmTC_58cc9.dir/src.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_58cc9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58cc9.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_58cc9.dir/src.c.o  -o cmTC_58cc9 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3c76c/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3c76c.dir/build.make CMakeFiles/cmTC_3c76c.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3c76c.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_3c76c.dir/src.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_3c76c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c76c.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_3c76c.dir/src.c.o  -o cmTC_3c76c 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7d314/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7d314.dir/build.make CMakeFiles/cmTC_7d314.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7d314.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_7d314.dir/src.cxx.o -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking CXX executable cmTC_7d314
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d314.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_7d314.dir/src.cxx.o  -o cmTC_7d314 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1893a/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1893a.dir/build.make CMakeFiles/cmTC_1893a.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1893a.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_1893a.dir/src.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking C executable cmTC_1893a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1893a.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_1893a.dir/src.c.o  -o cmTC_1893a 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8afb2/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8afb2.dir/build.make CMakeFiles/cmTC_8afb2.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8afb2.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_8afb2.dir/src.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_8afb2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8afb2.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_8afb2.dir/src.c.o  -o cmTC_8afb2 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2e96e/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2e96e.dir/build.make CMakeFiles/cmTC_2e96e.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2e96e.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_2e96e.dir/CheckIncludeFile.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: linux/videodev.h: No such file or directory
+    1 | #include <linux/videodev.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [CMakeFiles/cmTC_2e96e.dir/build.make:66: CMakeFiles/cmTC_2e96e.dir/CheckIncludeFile.c.o] Error 1
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_2e96e/fast] Error 2
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_923b2/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_923b2.dir/build.make CMakeFiles/cmTC_923b2.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_923b2.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_923b2.dir/CheckIncludeFile.c.o   -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/videoio.h: No such file or directory
+    1 | #include <sys/videoio.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [CMakeFiles/cmTC_923b2.dir/build.make:66: CMakeFiles/cmTC_923b2.dir/CheckIncludeFile.c.o] Error 1
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_923b2/fast] Error 2
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_493d2/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_493d2.dir/build.make CMakeFiles/cmTC_493d2.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_493d2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_493d2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+Linking C executable cmTC_493d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_493d2.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_493d2.dir/CheckFunctionExists.c.o  -o cmTC_493d2 
+/usr/bin/ld: CMakeFiles/cmTC_493d2.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_493d2.dir/build.make:87: cmTC_493d2] Error 1
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_493d2/fast] Error 2
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6d65e/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6d65e.dir/build.make CMakeFiles/cmTC_6d65e.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d65e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=cheev_ -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_6d65e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+Linking C executable cmTC_6d65e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d65e.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=cheev_ -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_6d65e.dir/CheckFunctionExists.c.o  -o cmTC_6d65e  /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so 
+/usr/bin/ld: CMakeFiles/cmTC_6d65e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_6d65e.dir/build.make:89: cmTC_6d65e] Error 1
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_6d65e/fast] Error 2
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_87606/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_87606.dir/build.make CMakeFiles/cmTC_87606.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_87606.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden   -O3 -DNDEBUG -fPIE    -Wno-inconsistent-missing-override -o CMakeFiles/cmTC_87606.dir/src.cxx.o -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+Linking CXX executable cmTC_87606
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87606.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden   -O3 -DNDEBUG    -Wl,--gc-sections   -rdynamic CMakeFiles/cmTC_87606.dir/src.cxx.o  -o cmTC_87606 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unused-private-field’'
+Compilation failed:
+    source file: '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-private-field'
+===== BUILD LOG =====
+Change Dir: /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4b59b/fast && make[3]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4b59b.dir/build.make CMakeFiles/cmTC_4b59b.dir/build
+make[4]: Entering directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4b59b.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG -fPIE    -Wno-unused-private-field -o CMakeFiles/cmTC_4b59b.dir/src.cxx.o -c /home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-unused-private-field’
+Linking CXX executable cmTC_4b59b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b59b.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_4b59b.dir/src.cxx.o  -o cmTC_4b59b 
+make[4]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+

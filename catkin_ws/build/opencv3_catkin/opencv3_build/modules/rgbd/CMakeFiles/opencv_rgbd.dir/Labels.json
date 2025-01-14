@@ -1,0 +1,138 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/include/opencv2/rgbd.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/include/opencv2/rgbd/linemod.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/depth_cleaner.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/depth_registration.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/depth_to_3d.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/linemod.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/normal.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/odometry.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/plane.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/utils.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/depth_to_3d.h",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib_src/modules/rgbd/src/utils.h",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/cvconfig.h"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_rgbd",
+			"Module"
+		],
+		"name" : "opencv_rgbd"
+	}
+}

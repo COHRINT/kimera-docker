@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/disparity_image_proc/lib/pkgconfig/disparity_image_proc.pc

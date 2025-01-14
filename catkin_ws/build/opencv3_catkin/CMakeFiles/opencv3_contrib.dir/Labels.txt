@@ -1,0 +1,13 @@
+# Target labels
+ opencv3_contrib
+# Source files and their labels
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_contrib
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_contrib.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_contrib-complete.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-install.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-mkdir.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-download.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-update.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-patch.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-configure.rule
+/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_contrib-prefix/src/opencv3_contrib-stamp/opencv3_contrib-build.rule

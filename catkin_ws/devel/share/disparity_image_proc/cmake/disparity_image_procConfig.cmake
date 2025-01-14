@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/disparity_image_proc/share/disparity_image_proc/cmake/disparity_image_procConfig.cmake

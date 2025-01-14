@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/lio_sam/share/gennodejs/ros/lio_sam/msg/ChannelFilter.js

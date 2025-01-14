@@ -1,0 +1,26 @@
+{
+  "rootdir": "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src",
+  "modules": [
+    { "name": "core", "location": "modules/core" },
+    { "name": "imgproc", "location": "modules/imgproc" },
+    { "name": "ml", "location": "modules/ml" },
+    { "name": "objdetect", "location": "modules/objdetect" },
+    { "name": "phase_unwrapping", "location": "../opencv3_contrib_src/modules/phase_unwrapping" },
+    { "name": "photo", "location": "modules/photo" },
+    { "name": "video", "location": "modules/video" },
+    { "name": "img_hash", "location": "../opencv3_contrib_src/modules/img_hash" },
+    { "name": "imgcodecs", "location": "modules/imgcodecs" },
+    { "name": "videoio", "location": "modules/videoio" },
+    { "name": "highgui", "location": "modules/highgui" },
+    { "name": "features2d", "location": "modules/features2d" },
+    { "name": "calib3d", "location": "modules/calib3d" },
+    { "name": "xfeatures2d", "location": "../opencv3_contrib_src/modules/xfeatures2d" },
+    { "name": "ximgproc", "location": "../opencv3_contrib_src/modules/ximgproc" },
+    { "name": "aruco", "location": "../opencv3_contrib_src/modules/aruco" }
+  ],
+  "files_remap": [
+    { "src": "modules/java/generator/android/java/org/opencv/android/OpenCVLoader.java.in", "target": "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/configured/modules/java/generator/android/java/org/opencv/android/OpenCVLoader.java" },
+    { "src": "modules/java/generator/src/java/org/opencv/osgi/OpenCVNativeLoader.java.in", "target": "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/configured/modules/java/generator/src/java/org/opencv/osgi/OpenCVNativeLoader.java" },
+    { "src": "modules/core/misc/java/src/java/core+Core.jcode.in", "target": "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/configured/modules/core/misc/java/src/java/core+Core.jcode" }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/include/opencv2/highgui.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/include/opencv2/highgui/highgui.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/include/opencv2/highgui/highgui_c.h",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/src/window.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/src/roiSelector.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/src/window_gtk.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src/modules/highgui/src/precomp.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_highgui",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/cvconfig.h"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Main",
+			"opencv_highgui",
+			"Module"
+		],
+		"name" : "opencv_highgui"
+	}
+}

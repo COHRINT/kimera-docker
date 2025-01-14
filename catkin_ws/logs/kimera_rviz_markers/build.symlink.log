@@ -1,0 +1,5 @@
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/share/kimera_rviz_markers/cmake/kimera_rviz_markersConfig-version.cmake
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/share/kimera_rviz_markers/cmake/kimera_rviz_markersConfig.cmake
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/lib/libkimera_rviz_markers.so
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/lib/pkgconfig/kimera_rviz_markers.pc
+Symlinking /home/cohrint/kimera-docker/catkin_ws/devel/lib/kimera_rviz_markers/kimera_rviz_markers_node

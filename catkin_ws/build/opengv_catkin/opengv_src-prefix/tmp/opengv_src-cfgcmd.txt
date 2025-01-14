@@ -1,0 +1,1 @@
+cmd='cd;../opengv_src;&&;cmake;.;-DCMAKE_BUILD_TYPE=Release;-DCMAKE_INSTALL_PREFIX:PATH=/home/cohrint/kimera-docker/catkin_ws/devel/.private/opengv_catkin'

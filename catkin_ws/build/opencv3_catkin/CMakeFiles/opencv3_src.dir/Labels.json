@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_src"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_src.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/CMakeFiles/opencv3_src-complete.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-install.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-mkdir.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-download.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-update.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-patch.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-configure.rule"
+		},
+		{
+			"file" : "/home/cohrint/kimera-docker/catkin_ws/build/opencv3_catkin/opencv3_src-prefix/src/opencv3_src-stamp/opencv3_src-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"opencv3_src"
+		],
+		"name" : "opencv3_src"
+	}
+}

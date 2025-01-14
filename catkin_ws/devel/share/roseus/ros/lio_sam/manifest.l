@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/lio_sam/share/roseus/ros/lio_sam/manifest.l

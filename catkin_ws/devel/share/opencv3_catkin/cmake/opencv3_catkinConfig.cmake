@@ -1,0 +1,1 @@
+/home/cohrint/kimera-docker/catkin_ws/devel/.private/opencv3_catkin/share/opencv3_catkin/cmake/opencv3_catkinConfig.cmake
